@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#36bce8</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#464646</color>
+
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#004D40</color>
+    <color name="colorAccent">#FF5722</color>
     <color name="placeholder">#e1e1e1</color>
     <color name="lineColor">#d9d9d9</color>
     <color name="transparent">#00000000</color>
@@ -13,4 +14,7 @@
     <color name="textColorLightGray">#999999</color>
     <color name="textColorHint">#CCCCCC</color>
     <color name="mask">#22000000</color>
+    <color name="swiperefresh_colorscheme_first">@color/colorPrimary</color>
+    <color name="swiperefresh_colorscheme_secondary">@color/colorPrimaryDark</color>
+    <color name="swiperefresh_colorscheme_third">@color/colorAccent</color>
 </resources>

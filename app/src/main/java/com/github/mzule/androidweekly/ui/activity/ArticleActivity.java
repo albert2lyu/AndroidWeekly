@@ -29,6 +29,7 @@ import butterknife.OnClick;
  */
 @Layout(R.layout.activity_article)
 public class ArticleActivity extends BaseActivity {
+
     @Bind(R.id.webView)
     WebView webView;
     @Bind(R.id.progressView)

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v4.widget.DrawerLayout
     android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,12 +15,12 @@
             android:id="@+id/tintBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white" />
+            android:background="@color/white"/>
 
         <LinearLayout
             android:id="@+id/brandView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/action_bar_height"
+            android:layout_height="?attr/actionBarSize"
             android:layout_below="@id/tintBar"
             android:background="@color/white"
             android:gravity="center">
@@ -29,7 +31,7 @@
                 android:text="ANDROID"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_size_large"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,35 +40,45 @@
                 android:text="WEEKLY"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/text_size_large"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <com.github.mzule.androidweekly.ui.view.IconButton
             android:id="@+id/slideMenuButton"
             style="@style/SmallControl"
             android:layout_below="@id/tintBar"
-            app:materialIcon="menu" />
+            app:materialIcon="menu"
+            tools:background="#f00"/>
 
         <View
             android:id="@+id/lineView"
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_below="@id/brandView"
-            android:background="@color/lineColor" />
+            android:background="@color/lineColor"/>
 
-        <com.github.mzule.androidweekly.ui.view.PinnedSectionListView
-            android:id="@+id/listView"
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/lineView"
-            android:divider="@null"
-            android:overScrollMode="never" />
+            tools:ignore="UnknownIdInLayout">
+
+            <com.github.mzule.androidweekly.ui.view.PinnedSectionListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:overScrollMode="never"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
 
         <com.github.mzule.androidweekly.ui.view.ProgressView
             android:id="@+id/progressView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -79,12 +91,12 @@
 
         <com.github.mzule.androidweekly.ui.view.TintStatusBar
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/lineColor" />
+            android:background="@color/lineColor"/>
 
         <ListView
             android:id="@+id/slideListView"
@@ -93,12 +105,12 @@
             android:layout_weight="1"
             android:divider="@null"
             android:overScrollMode="never"
-            android:scrollbars="none" />
+            android:scrollbars="none"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/lineColor" />
+            android:background="@color/lineColor"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,17 +120,17 @@
             <com.github.mzule.androidweekly.ui.view.IconButton
                 android:id="@+id/favoriteButton"
                 style="@style/NormalControl"
-                app:materialIcon="star" />
+                app:materialIcon="star"/>
 
             <com.github.mzule.androidweekly.ui.view.IconButton
                 android:id="@+id/searchButton"
                 style="@style/NormalControl"
-                app:materialIcon="magnify" />
+                app:materialIcon="magnify"/>
 
             <com.github.mzule.androidweekly.ui.view.IconButton
                 android:id="@+id/aboutButton"
                 style="@style/NormalControl"
-                app:materialIcon="information" />
+                app:materialIcon="information"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>

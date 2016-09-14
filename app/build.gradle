@@ -24,6 +24,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:customtabs:23.1.1'
     compile 'com.github.mzule.easyadapter:easyadapter:1.1.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'org.jsoup:jsoup:1.8.3'
